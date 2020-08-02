@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+  {% block content %}
+  <h1>Welcome to the Game Rock/Paper/Scissors</h1>
+
+    <div>This is a simple game of chance (with possibly a bit of wit, if you can learn your opponants moves).
+    Simple pick and option rock, paper or scissors.  Each option has its strength and weakness.
+      <p><b>Rock</b> will win over scissors as it will blunt them, but will lose over paper as it is covered by that.</p>
+      <p><b>Paper</b> will win over rock as it covers it, but will lose to paper as it is cut.</p>
+      <p><b>Scissors</b> will win over paper as it cuts it, but will lose to rock as they are blunted by it.</p>
+    </div>
+    <P><b>NB:</b> If you want to play against the computer enter "computer" as the second player name and dont choose drom the dropdown.</P>
+
+    <p>Choose Start to play the game</p>
+    </div>
+    <form action="/home">
+      <input type="submit" id="submit" value="Start">
+    </form>
+  {% endblock %}
