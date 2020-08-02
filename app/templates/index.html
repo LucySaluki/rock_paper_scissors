@@ -1,31 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title }} - Rock/Paper/Scissors Game</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+  {% block content %}
   <h1>Let's Play Rock/Paper/Scissors</h1>
+
   <form action="/results" method="post"> 
-    <label for="player_1">Player's Name</label>
-    <input type="text" name="player_1" id="player_1">
+    <div>
+    <input type="text" name="player_1" id="player" placeholder="First player's name">
     <label for="choice_1">Choose:</label>
-      <select name="choice_1" id="choice_1">
+      <select name="choice_1" id="choice">
         <option value="rock">Rock</option>
         <option value="paper">Paper</option>
         <option value="scissors">Scissors</option>
-      </select>
-    <label for="player_2">Player 2</label>
-    <input type="text" name="player_2" id="player_2">
+      </select></div>
+    <div>
+    <input type="text" name="player_2" id="player" placeholder="Second player's name">
     <label for="choice_2">Choose:</label>
-    <select name="choice_2" id="choice_2">
+    <select name="choice_2" id="choice">
       <option value="rock">Rock</option>
       <option value="paper">Paper</option>
       <option value="scissors">Scissors</option>
-    </select>
-    <input type="submit" value="Make a Choice">
+    </select></div>
+    <div class="submit"><input type="submit" value="Make a Choice" id="submit"></div>
   </form>
 
-</body>
-</html>
+  {% endblock %}
